@@ -43,6 +43,10 @@ nav a {
   color: black;
   transition: all 0.4s ease;
 }
+nav a.active {
+  color: rgb(148, 45, 216);
+  border-bottom: 3px solid rgb(148, 45, 216);
+}
 nav a:hover {
   color: rgb(148, 45, 216);
   font-weight: 550;
