@@ -181,18 +181,53 @@ h2 {
   margin-bottom: 20px;
 }
 
-#service:hover .dropdown-content {
-  display: block;
-  position: absolute;
+#service {
+  position: relative;
 }
-.dropdown-content {
+
+#service .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
+  /* background-color: rgb(255, 255, 255); */
+  border: 2px solid rgb(148, 45, 216);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  margin: 10px 0 0 0;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
 }
 
+#service:hover .dropdown-content {
+  display: block;
+}
+
+#service .dropdown-content li {
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+#service .dropdown-content li:hover {
+  background-color: rgba(148, 45, 216, 0.1);
+  color: rgb(148, 45, 216);
+}
+
+#service .dropdown-content li p {
+  margin: 0;
+  font-size: large;
+  color: black;
+  transition: all 0.3s ease;
+}
+
+#service .dropdown-content li:hover p {
+  color: rgb(148, 45, 216);
+}
 
 #gallery {
-  padding: 60px 40px;          
+  padding: 60px 40px;
   text-align: center;
 }
 
@@ -212,7 +247,6 @@ h2 {
 .gallery-grid {
   scrollbar-width: none;
   padding: 20px;
-
 }
 
 .gallery-item {
@@ -229,7 +263,6 @@ h2 {
   border-radius: 8px;
   box-shadow: 0px 0px 15px rgb(85, 84, 84);
   transition: all 0.4s ease;
-  
 }
 .gallery-item img:hover {
   transform: scale(1.05);
@@ -245,8 +278,8 @@ h2 {
 }
 
 .services-content {
-  display: flex;                
-  gap: 50px;                    
+  display: flex;
+  gap: 50px;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -257,7 +290,7 @@ h2 {
   padding: 30px;
   width: 320px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -269,7 +302,6 @@ h3 {
   font-size: 20px;
   color: rgb(148, 45, 216);
   margin: 15px;
-
 }
 .service-item-cards p {
   font-size: 16px;
@@ -283,5 +315,230 @@ h3 {
   background-color: rgb(255, 255, 255);
   text-align: center;
 }
+/* Responsive Design - Tablet (768px and below)
+@media (max-width: 768px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
+  nav {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-top: 0;
+  }
 
+  nav img {
+    margin: 15px;
+  }
+
+  nav p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  nav a {
+    margin: 10px;
+    padding: 8px;
+    font-size: large;
+  }
+
+  nav button {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px 30px;
+    font-size: large;
+  }
+
+  #home {
+    padding: 100px 20px;
+    margin-top: 20px;
+  }
+
+  .home-text-overlay h1 {
+    font-size: 50px;
+  }
+
+  .home-text-overlay p {
+    font-size: 18px;
+  }
+
+  .home-text-overlay button {
+    padding: 15px 40px;
+    font-size: large;
+    margin-top: 30px;
+  }
+
+  #about {
+    padding: 100px 20px;
+  }
+
+  #about p {
+    font-size: 24px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #gallery {
+    padding: 40px 20px;
+  }
+
+  .gallery-item {
+    width: 300px;
+    height: 200px;
+  }
+
+  #services {
+    padding: 80px 20px;
+  }
+
+  .services-content {
+    gap: 30px;
+  }
+
+  .service-item-cards {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #contact {
+    padding: 80px 20px;
+  }
+
+  #contact p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .service-item-cards p {
+    font-size: 14px;
+  }
+} */
+
+/* Responsive Design - Mobile (480px and below) */
+@media (max-width: 480px) {
+  body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  nav p {
+    font-size: x-large;
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+
+  nav a {
+    margin: 5px;
+    padding: 5px;
+    font-size: medium;
+  }
+
+  nav button {
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 8px 20px;
+    font-size: medium;
+  }
+
+  #service .dropdown-content {
+    min-width: 150px;
+    font-size: small;
+  }
+
+  #home {
+    padding: 80px 10px;
+    margin-top: 20px;
+  }
+
+  .home-text-overlay {
+    bottom: -15%;
+  }
+
+  .home-text-overlay h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  .home-text-overlay p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .home-text-overlay button {
+    padding: 10px 30px;
+    font-size: medium;
+    margin-top: 20px;
+  }
+
+  #about {
+    padding: 60px 10px;
+  }
+
+  #about p {
+    font-size: 18px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  #gallery {
+    padding: 20px 10px;
+  }
+
+  .gallery-item {
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+  }
+
+  #services {
+    padding: 60px 10px;
+  }
+
+  .services-content {
+    gap: 20px;
+  }
+
+  .service-item-cards {
+    width: 100%;
+    max-width: 280px;
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .service-item-cards p {
+    font-size: 13px;
+  }
+
+  #contact {
+    padding: 60px 10px;
+  }
+
+  #contact p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+}
